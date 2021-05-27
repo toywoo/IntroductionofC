@@ -1,0 +1,37 @@
+Recursive(3) =>
+
+void Recursive(num = 3)
+{
+    if (num == 0)
+        return;
+    
+    printf("Recursive Call\n");
+    Recursive(3-1);
+} 
+
+=>
+
+void Recursive(num = 3)
+{
+    if (num == 0)
+        return;
+
+    printf("Recursive Call %d\n", num = 3);
+    printf("Recursive Call %d\n", num = 2);
+    Recursive(2-1);
+}
+
+=> 
+
+void Recursive(num = 3)
+{
+    if (num == 0)
+        return;
+
+    printf("Recursive Call %d\n", num = 3);
+    printf("Recursive Call %d\n", num = 2);
+    printf("Recursive Call %d\n", num = 1);
+    Recursive(1-1);
+}
+
+=> Recursive(0)이므로 끝
